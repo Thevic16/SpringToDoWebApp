@@ -1,10 +1,17 @@
 package com.victorgomez.spingboot.webapp.todo;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Size;
 
 import java.time.LocalDate;
 
+@Entity
 public class Todo {
+
+    @Id
+    @GeneratedValue
     private int id;
     private String username;
 
@@ -19,6 +26,10 @@ public class Todo {
         this.description = description;
         this.targetDate = targetDate;
         this.done = done;
+    }
+
+    public Todo() {
+
     }
 
     public int getId() {
