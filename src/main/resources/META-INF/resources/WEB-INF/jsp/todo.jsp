@@ -19,10 +19,14 @@
             <form:errors path="targetDate" cssClass="text-warning"/>
         </fieldset>
 
+        <fieldset class="mb-3">
+            <form:label path="targetDate">Done</form:label>
+            <form:input type="text" path="done" required="required"/>
+            <form:errors path="done" cssClass="text-warning"/>
+        </fieldset>
+
 
         <form:input type="hidden" path="id"/>
-
-        <form:input type="hidden" path="done"/>
 
         <input type="submit" class="btn btn-success"/>
 
